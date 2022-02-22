@@ -22,16 +22,16 @@ class WebService{
     on WebserviceException catch(e){
       throw WebserviceException(e.message);
     }
-     on SocketException catch (e) {
-      print("socketexception:${e.message}");
+     on SocketException catch (_) {
+     
       throw WebserviceException("Some network error occured");
     }
-    on FormatException catch(e){
-      print("FormatException:${e.message}");
+    on FormatException catch(_){
+  
       throw WebserviceException("Request is badly formatted");
     }
     on HttpException catch(e){
-     print("HttpException:${e.message}");
+ 
       throw WebserviceException(e.message);
     }
     catch(_){
