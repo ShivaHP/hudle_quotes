@@ -19,13 +19,13 @@ class QuoteModel {
 
   factory QuoteModel.fromJson(Map json) {
     return QuoteModel(
-        tags: json["tags"],
-        id: json["_id"],
-        content: json["content"],
-        author: json["author"],
-        authorSlug: json["authorSlug"],
-        length: json["length"],
-        dateadded: json["dateAdded"],
-        datemodified: json["dateModified"]);
+        tags: json["tags"]??[],
+        id: json["_id"]??"",
+        content: json["content"]??"",
+        author: json["author"]??"",
+        authorSlug: json["authorSlug"]??"",
+        length: json["length"]??0,
+        dateadded: json["dateAdded"]??"",
+        datemodified: json["dateModified"]??"");
   }
 }

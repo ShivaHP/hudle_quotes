@@ -4,7 +4,6 @@ import 'package:hudle_quotes/blocs/randomquotebloc/randomquote_state.dart';
 import 'package:hudle_quotes/models/quote/src/quote_exception.dart';
 import 'package:hudle_quotes/models/quote/src/quotemodel.dart';
 import 'package:hudle_quotes/repository/quoterepo/quoterepository.dart';
-import 'package:hudle_quotes/utils/webservice/webservice.dart';
 
 class RandomQuoteBloc extends Bloc<RandomQuoteEvent,RandomQuoteState>{
   final QuoteRepository _repository;
